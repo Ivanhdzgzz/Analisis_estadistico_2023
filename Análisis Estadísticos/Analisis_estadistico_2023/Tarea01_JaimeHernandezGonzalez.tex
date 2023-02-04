@@ -1,0 +1,294 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\title{Tarea01\_JaimeHernandezGonzalez.R}
+\author{Jaime}
+\date{2023-02-03}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Tarea01\_JaimeHernandezGonzalez.R},
+  pdfauthor={Jaime},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+\begin{Shaded}
+\begin{Highlighting}[]
+                       \DocumentationTok{\#\# TAREA 1. PARTE 2 \#\#}
+
+             \DocumentationTok{\#\# ASIGNACIÓN 1: Primer Análisis en R. \#\#}
+                      \DocumentationTok{\#\# PARTE 2: Problemas. \#\#}
+
+\CommentTok{\#MATERIA: Análisis estadísticos}
+\CommentTok{\#ALUMNO: Jaime Iván Hernández González}
+\CommentTok{\#MATRÍCULA: 1797990}
+\CommentTok{\#FECHA: 02 de febrero de 2023.}
+
+\CommentTok{\#INSTRUCCIONES PARTE 2: Resolver los problemas que se enlistan a continuación. Crear un nuevo script denominado TareaXX\_NombreAlumno.R. El script debe estar identificado y creado en el proyecto creado en clase: Analisis\_estadistico\_2023.}
+
+
+\CommentTok{\#PROBLEMA 1: Un investigador realiza un inventario de la superficie reforestada por especie en la región centro mediante los reportes emitidos por CONAFOR. El investigador encuentra que la superficie reforestada con diferentes especies son las siguientes: la especie Pinus con 3140 has, Mezquite con 1453 has, Encinos con 450 has, Teka con 1200 has, Juiperos con 720 has.}
+
+\DocumentationTok{\#\#Toma los objetos creados del inventario (i.e variables) Pinus, Mexquite, Encinos, Teka y Juniperos y escribamos dentro de la función de combinación c() para crear un vector llamado superficie:}
+
+\NormalTok{variable.names }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Pinus"}\NormalTok{, }\StringTok{"Mezquite"}\NormalTok{, }\StringTok{"Encinos"}\NormalTok{, }\StringTok{"Teka"}\NormalTok{, }\StringTok{"Juniperos"}\NormalTok{)}
+
+\NormalTok{Pinus }\OtherTok{\textless{}{-}} \DecValTok{3140}
+\NormalTok{Mezquite }\OtherTok{\textless{}{-}} \DecValTok{1453}
+\NormalTok{Encinos }\OtherTok{\textless{}{-}} \DecValTok{450}
+\NormalTok{Teka }\OtherTok{\textless{}{-}} \DecValTok{1200}
+\NormalTok{Juniperos }\OtherTok{\textless{}{-}} \DecValTok{720}
+
+\NormalTok{superficie }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(Pinus, Mezquite, Encinos, Teka, Juniperos)}
+
+\DocumentationTok{\#\#Use la función gráfica barplot() para producir un diagrama de barras de la superficie por especie:}
+
+\FunctionTok{barplot}\NormalTok{(superficie)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Tarea01_JaimeHernandezGonzalez_files/figure-latex/unnamed-chunk-1-1.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#Descubra cómo utilizar sort() para ordenar los elementos en la variable superficie, con el fin de organizar elementos en gastos en orden creciente:}
+
+\FunctionTok{barplot}\NormalTok{(}\FunctionTok{sort}\NormalTok{(superficie, }\AttributeTok{decreasing =} \ConstantTok{FALSE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Tarea01_JaimeHernandezGonzalez_files/figure-latex/unnamed-chunk-1-2.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#Descubra cómo utilizar sort() y barplot() para producir un gráfico de barras con barras en orden decreciente:}
+
+\FunctionTok{barplot}\NormalTok{(}\FunctionTok{sort}\NormalTok{(superficie, }\AttributeTok{decreasing =} \ConstantTok{TRUE}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Tarea01_JaimeHernandezGonzalez_files/figure-latex/unnamed-chunk-1-3.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#Opcional: Mostrar los nombres de las variables debajo de cada una de las barras:}
+
+\FunctionTok{barplot}\NormalTok{(}\FunctionTok{sort}\NormalTok{(superficie, }\AttributeTok{decreasing =} \ConstantTok{TRUE}\NormalTok{), }\AttributeTok{names.arg =}\NormalTok{ variable.names)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{Tarea01_JaimeHernandezGonzalez_files/figure-latex/unnamed-chunk-1-4.pdf}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#Determine la media de la variable superficie:}
+
+\FunctionTok{mean}\NormalTok{(superficie)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1392.6
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#PROBLEMA 2: Un técnico examina 30 cajas de Petri en las que se colocaron para germinar seis semillas y después de cierto tiempo cuenta el número de semillas germinadas en cada una de ellas. Los valores de las 30 observaciones son los siguientes:}
+\CommentTok{\# xi = 4, 1, 6, 2, 4, 2, 4, 2, 4, 6, 3, 5, 3, 2, 5, 4, 0, 5, 4, 2, 4, 5, 3, 5, 3, 5, 4, 3, 6, 2}
+
+\DocumentationTok{\#\#Ingresar los datos en una variable llamada germinación:}
+
+\NormalTok{germinacion }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{0}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{6}\NormalTok{, }\DecValTok{2}\NormalTok{)}
+
+\DocumentationTok{\#\#Determinar la media de germinación de las 30 cajas Petri:}
+
+\FunctionTok{mean}\NormalTok{(germinacion)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3.6
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#Averigue como determinar la desviasión estándar "standar deviation" usando la función help (en la modalidad que desee):}
+
+\FunctionTok{help}\NormalTok{(}\StringTok{"sd"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## starting httpd help server ... done
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sd}\NormalTok{ (germinacion, }\AttributeTok{na.rm =} \ConstantTok{FALSE}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.522249
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sd}\NormalTok{(germinacion)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.522249
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{var}\NormalTok{(germinacion)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 2.317241
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#PROBLEMA 3: Un viverista mide la altura alcanzada por 25 plantas de Prosopis de un año de edad, obteniendo los siguientes valores:}
+\CommentTok{\# xi = 38, 14, 44, 11, 9, 21, 39, 28, 41, 4, 35, 24, 36, 12, 20, 31, 24, 25, 10, 21, 11, 36, 37, 20, 26}
+
+\DocumentationTok{\#\#Ingresar los datos en una variable llamada altura:}
+
+\NormalTok{altura }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{38}\NormalTok{, }\DecValTok{14}\NormalTok{, }\DecValTok{44}\NormalTok{, }\DecValTok{11}\NormalTok{, }\DecValTok{9}\NormalTok{, }\DecValTok{21}\NormalTok{, }\DecValTok{39}\NormalTok{, }\DecValTok{28}\NormalTok{, }\DecValTok{41}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{35}\NormalTok{, }\DecValTok{24}\NormalTok{, }\DecValTok{36}\NormalTok{, }\DecValTok{12}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{31}\NormalTok{, }\DecValTok{24}\NormalTok{, }\DecValTok{25}\NormalTok{, }\DecValTok{10}\NormalTok{, }\DecValTok{21}\NormalTok{, }\DecValTok{11}\NormalTok{, }\DecValTok{36}\NormalTok{, }\DecValTok{37}\NormalTok{, }\DecValTok{20}\NormalTok{, }\DecValTok{26}\NormalTok{)}
+
+\DocumentationTok{\#\#Determinar la media de altura de las plántulas de Prosopis:}
+
+\FunctionTok{mean}\NormalTok{(altura)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 24.68
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\DocumentationTok{\#\#Determinar la desviación estándar de la variable altura:}
+
+\FunctionTok{sd}\NormalTok{(altura)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 11.54599
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{var}\NormalTok{(altura)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 133.31
+\end{verbatim}
+
+\end{document}
