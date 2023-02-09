@@ -91,7 +91,7 @@ sd(Dbh.up30)
 # Importar datos de base de datos "Vivero" --------------------------------
 # Función read.csv
 
-Fert <- read.csv("C:/Users/Jaime/Documents/Analisis_estadistico_2023/Vivero.csv", header = TRUE)
+Fert <- read.csv("Vivero.csv", header = TRUE)
 
 Fert$Tratamiento <- as.factor(Fert$Tratamiento)
 
@@ -103,4 +103,3 @@ boxplot(Fert$IE ~ Fert$Tratamiento,
         las = 1,
         ylim = c(0.4, 1.4))
 
-#Hola
