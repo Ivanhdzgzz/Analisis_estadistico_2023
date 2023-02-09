@@ -7,7 +7,7 @@ Semana 2:
 Laboratorio 1: Empezar con R y Rstudio
 Asignación 1: Primer Análisis en R
 
-Semana 3:
+Semana 3: 
 
 Semana 4:
 
