@@ -103,4 +103,4 @@ boxplot(Fert$IE ~ Fert$Tratamiento,
         las = 1,
         ylim = c(0.4, 1.4))
 
- 
+#Hola
